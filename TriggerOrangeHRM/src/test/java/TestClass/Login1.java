@@ -27,7 +27,8 @@ public class Login1 extends TestBase
 		System.out.println("Welcome");
 		String title=getDriver().getTitle();
 		//Assert.assertEquals(title,"OrangeHRM");
-	//	loginpage.ValidateLoginCredintials(prop.getProperty("username"),prop.getProperty("password"));
+		loginpage.ValidateLoginCredintials(prop.getProperty("username"),prop.getProperty("password"));
+		System.out.println("Login with Valid Credinatial Successful");
 	}
 	@AfterMethod
 	public void tearDown() {

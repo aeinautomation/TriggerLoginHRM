@@ -31,11 +31,11 @@ public class LoginPage extends TestBase
 	}
 	
 	//Action Declaration
-	public String ValidateTitle()
-	{
-		return getDriver().getTitle();
-	}
-	
+//	public String ValidateTitle()
+//	{
+//		return getDriver().getTitle();
+//	}
+//	
 	public boolean ValidateLogo()
 	{
 		return CRMLogo.isDisplayed();

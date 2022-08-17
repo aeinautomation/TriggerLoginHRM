@@ -24,7 +24,7 @@ public class Login1 extends TestBase
 	{
 		launchApp(); 
 	}
-	@Test
+	@Test(priority = 1)
 	public void ValidateTitleTest()
 	{
 		loginpage=new LoginPage();

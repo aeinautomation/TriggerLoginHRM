@@ -46,7 +46,7 @@ public class LoginPage extends TestBase
 		username.sendKeys(un);
 		password.sendKeys(pass);
 		submitbtn.click();
-		
+		System.out.println("Login Successful");
 		return new Dashboard();
 	} 
 }

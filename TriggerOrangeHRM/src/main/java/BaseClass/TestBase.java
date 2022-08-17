@@ -16,21 +16,14 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
-
-
 public class TestBase 
 {
 	public static Properties prop;
-
 	// Declare ThreadLocal Driver
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
-
 	//loadConfig method is to load the configuration
 	@BeforeSuite(groups = { "Smoke", "Sanity", "Regression" })
 	public void loadConfig() {
-		
-
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
@@ -43,7 +36,6 @@ public class TestBase
 			e.printStackTrace();
 		}
 	}
-
 	public static WebDriver getDriver() {
 		// Get Driver from threadLocalmap
 		return driver.get();
@@ -82,7 +74,6 @@ public class TestBase
 //		//Launching the URL
 //		getDriver().get(prop.getProperty("OrangeURL"));
 //	}
-
 	@AfterSuite(groups = { "Smoke", "Regression","Sanity" })
 	public void afterSuite() {
 	//	ExtentManager.endReport();

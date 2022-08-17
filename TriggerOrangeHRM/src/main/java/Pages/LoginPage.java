@@ -10,10 +10,10 @@ public class LoginPage extends TestBase
 {
 	//Page Factory
 	@FindBy (xpath="//input[@name='username']")
-	WebElement username;
+	WebElement Validusername;
 	
 	@FindBy (xpath="//input[@name='password']")
-	WebElement password;
+	WebElement Validpassword;
 	
 	@FindBy (xpath="//button[@type=\"submit\"]")
 	private WebElement submitbtn;
@@ -43,8 +43,8 @@ public class LoginPage extends TestBase
 	
 	public Dashboard ValidateLoginCredintials(String un,String pass)
 	{
-		username.sendKeys(un);
-		password.sendKeys(pass);
+		Validusername.sendKeys(un);
+		Validpassword.sendKeys(pass);
 		submitbtn.click();
 		System.out.println("Login Successful");
 		return new Dashboard();

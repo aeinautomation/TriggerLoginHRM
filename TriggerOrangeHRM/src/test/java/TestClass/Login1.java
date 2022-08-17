@@ -20,15 +20,24 @@ public class Login1 extends TestBase
 	{
 		launchApp(); 
 	}
-	@Test
+	@Test(priority = 1)
 	public void ValidateTitleTest()
 	{
 		loginpage=new LoginPage();
-		System.out.println("Welcome");
+		System.out.println("Welcome To Orange HRM");
 		String title=getDriver().getTitle();
 		//Assert.assertEquals(title,"OrangeHRM");
-		loginpage.ValidateLoginCredintials(prop.getProperty("username"),prop.getProperty("password"));
-		System.out.println("Login with Valid Credinatial Successful");
+		}
+	
+	@Test(priority = 2)
+	public void ValidateLoginCredinatilTest() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		//WebDriver wait =new WebDriver(driver,3);
+		loginpage=new LoginPage();
+		dashboard=loginpage.ValidateLoginCredintials(prop.getProperty("username"),prop.getProperty("password"));
+		System.out.println("Login Successfull with Valid Credintila");
+		//System.out.println("Login unsuccessfull with Valid Credintila");
 	}
 	@AfterMethod
 	public void tearDown() {

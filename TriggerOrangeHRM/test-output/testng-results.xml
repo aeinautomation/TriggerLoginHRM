@@ -1,33 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-17T16:03:48 IST" name="Suite" finished-at="2022-08-17T16:03:54 IST" duration-ms="5818">
+  <suite started-at="2022-08-17T16:19:03 IST" name="Default suite" finished-at="2022-08-17T16:19:11 IST" duration-ms="7624">
     <groups>
     </groups>
-    <test started-at="2022-08-17T16:03:48 IST" name="Test" finished-at="2022-08-17T16:03:54 IST" duration-ms="5818">
+    <test started-at="2022-08-17T16:19:03 IST" name="Default test" finished-at="2022-08-17T16:19:11 IST" duration-ms="7624">
       <class name="TestClass.Login1">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:TestClass.Login1@26275bef]" started-at="2022-08-17T16:03:48 IST" name="loadConfig" finished-at="2022-08-17T16:03:48 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:TestClass.Login1@7671cb68]" started-at="2022-08-17T16:19:03 IST" name="loadConfig" finished-at="2022-08-17T16:19:03 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.Login1@26275bef]" started-at="2022-08-17T16:03:48 IST" name="setup" finished-at="2022-08-17T16:03:54 IST" duration-ms="5555" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.Login1@7671cb68]" started-at="2022-08-17T16:19:03 IST" name="setup" finished-at="2022-08-17T16:19:08 IST" duration-ms="4292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ValidateTitleTest()[pri:0, instance:TestClass.Login1@26275bef]" started-at="2022-08-17T16:03:54 IST" name="ValidateTitleTest" finished-at="2022-08-17T16:03:54 IST" duration-ms="51" status="PASS">
+        <test-method signature="ValidateLoginCredinatilTest()[pri:2, instance:TestClass.Login1@7671cb68]" started-at="2022-08-17T16:19:08 IST" name="ValidateLoginCredinatilTest" finished-at="2022-08-17T16:19:11 IST" duration-ms="3100" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+at Pages.LoginPage.ValidateLoginCredintials(LoginPage.java:47)
+at TestClass.Login1.ValidateLoginCredinatilTest(Login1.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateTitleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestClass.Login1@26275bef]" started-at="2022-08-17T16:03:54 IST" name="tearDown" finished-at="2022-08-17T16:03:54 IST" duration-ms="176" status="PASS">
+        </test-method> <!-- ValidateLoginCredinatilTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestClass.Login1@7671cb68]" started-at="2022-08-17T16:19:11 IST" name="tearDown" finished-at="2022-08-17T16:19:11 IST" duration-ms="203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestClass.Login1@26275bef]" started-at="2022-08-17T16:03:54 IST" name="afterSuite" finished-at="2022-08-17T16:03:54 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestClass.Login1@7671cb68]" started-at="2022-08-17T16:19:11 IST" name="afterSuite" finished-at="2022-08-17T16:19:11 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- TestClass.Login1 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

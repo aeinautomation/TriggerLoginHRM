@@ -4,13 +4,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -45,7 +41,7 @@ public class TestBase
 		WebDriverManager.chromedriver().setup();
 		// Set Browser to ThreadLocalMap
 		driver.set(new ChromeDriver());
-		getDriver().get(prop.getProperty("OrangeURL"));
+		getDriver().get(prop.getProperty("url"));
 	}
 
 //	public void launchApp(String browserName) {

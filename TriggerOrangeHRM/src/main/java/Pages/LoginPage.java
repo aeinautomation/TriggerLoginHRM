@@ -9,13 +9,13 @@ import BaseClass.TestBase;
 public class LoginPage extends TestBase 
 {
 	//Page Factory
-	@FindBy (xpath="//input[@name='txtUsername']")
+	@FindBy (xpath="//input[@name='username']")
 	WebElement username;
 	
-	@FindBy (xpath="//input[@name='txtPassword']")
+	@FindBy (xpath="//input[@name='password']")
 	WebElement password;
 	
-	@FindBy (xpath="//input[@name='Submit']")
+	@FindBy (xpath="//button[@type=\"submit\"]")
 	private WebElement submitbtn;
 	
 	@FindBy (xpath = "//div[@id='divLogo']/img")
